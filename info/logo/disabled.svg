@@ -11,11 +11,11 @@
    version="1.1"
    width="128"
    style="overflow: hidden; position: relative;"
-   id="svg60"
-   sodipodi:docname="river_crossing_icon_disabled_2.svg"
+   id="svg5064"
+   sodipodi:docname="river_crossing_icon_disabled.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <metadata
-     id="metadata64">
+     id="metadata5068">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -37,21 +37,21 @@
      inkscape:pageshadow="2"
      inkscape:window-width="1600"
      inkscape:window-height="837"
-     id="namedview62"
+     id="namedview5066"
      showgrid="false"
-     inkscape:zoom="5.039"
-     inkscape:cx="64"
+     inkscape:zoom="1.844"
+     inkscape:cx="-50.98"
      inkscape:cy="64"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg60" />
+     inkscape:current-layer="svg5064" />
   <desc
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="desc42">Created with Raphaël 2.2.0</desc>
+     id="desc5044">Created with Raphaël 2.2.0</desc>
   <defs
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="defs44" />
+     id="defs5046" />
   <rect
      x="6"
      y="6"
@@ -63,44 +63,44 @@
      stroke="#000"
      stroke-width="0"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="rect46" />
+     id="rect5048" />
   <path
      fill="#ffffff"
      stroke="#ffffff"
-     d="M25,41L41,35L41,25L43,25L51,35L57,45L47,55L43,45L31,45Z"
+     d="M25,38L41,32L41,22L43,22L51,32L57,42L47,52L43,42L31,42Z"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round;"
      stroke-width="5px"
      stroke-linejoin="round"
-     id="path48" />
+     id="path5050" />
   <path
      fill="#ffffff"
      stroke="#ffffff"
-     d="M44.8,78.4C44.8,69.65,58.8,66.15,58.8,69.65C58.8,67.9,48.3,69.65,48.3,78.4L48.3,81.2L55.3,84.7L48.3,84.7L46.55,101.85H36.05L34.3,84.69999999999999L27.299999999999997,84.69999999999999L34.3,81.19999999999999L34.3,78.39999999999999C34.3,69.64999999999999,23.799999999999997,67.89999999999999,23.799999999999997,69.64999999999999C23.799999999999997,66.14999999999999,37.8,69.64999999999999,37.8,78.39999999999999Z"
+     d="M44.8,75.4C44.8,66.65,58.8,63.150000000000006,58.8,66.65C58.8,64.9,48.3,66.65,48.3,75.4L48.3,78.2L55.3,81.7L48.3,81.7L46.55,98.85H36.05L34.3,81.69999999999999L27.299999999999997,81.69999999999999L34.3,78.19999999999999L34.3,75.39999999999999C34.3,66.64999999999999,23.799999999999997,64.89999999999999,23.799999999999997,66.64999999999999C23.799999999999997,63.14999999999999,37.8,66.64999999999999,37.8,75.39999999999999Z"
      stroke-width="1.4px"
      stroke-linejoin="round"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round;"
-     id="path50" />
+     id="path5052" />
   <circle
      cx="88"
-     cy="40"
+     cy="37"
      r="15"
      fill="#ffffff"
      stroke="#ffffff"
      stroke-width="0"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="circle52" />
+     id="circle5054" />
   <circle
      cx="87.5"
-     cy="71.45"
+     cy="68.45"
      r="4.1499999999999995"
      fill="#ffffff"
      stroke="#ffffff"
      stroke-width="0"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="circle54" />
+     id="circle5056" />
   <rect
      x="83.35"
-     y="77.25999999999999"
+     y="74.25999999999999"
      width="8.299999999999999"
      height="24.9"
      rx="3.32"
@@ -109,11 +109,19 @@
      stroke="#ffffff"
      stroke-width="0"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="rect56" />
+     id="rect5058" />
   <path
      fill="#ffffff"
-     stroke="#ffffff"
-     d="M6,112H122A10,10,45,0,1,112,122H16A10,10,45,0,1,6,112Z"
+     stroke="#000000"
+     d="M6,109H122V112A10,10,45,0,1,112,122H16A10,10,45,0,1,6,112Z"
+     stroke-width="0"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="path58" />
+     id="path5060" />
+  <path
+     fill="#ffffff"
+     stroke="#000000"
+     d="M6,113C15,110,26,110,35,113C44,116,55,116,64,113C73,110,84,110,93,113C102,116,113,116,122,113A10,-10,45,0,1,112,123H16A10,-10,45,0,1,6,113Z"
+     stroke-width="0"
+     style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
+     id="path5062" />
 </svg>
