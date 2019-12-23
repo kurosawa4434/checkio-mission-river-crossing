@@ -1,15 +1,14 @@
-def river_crossing(loads, payload):
-    # your code here
+def river_crossing(wolves, goats, cabbages, payload):
     return None
 
 
 if __name__ == '__main__':
     print("Example:")
-    print (river_crossing({'w': 1, 'g': 1, 'c': 1}, 1))
+    print (river_crossing(1, 1, 1, 1))
 
     # These "asserts" are used for self-checking and not for an auto-testing
-    assert river_crossing({'w': 1, 'g': 1, 'c': 1}, 1) == 7, 'original'
-    assert river_crossing({'w': 1, 'g': 1, 'c': 1}, 2) == 3, 'payload +1'
-    assert river_crossing({'w': 2, 'g': 1, 'c': 1}, 2) == 5, 'payload +1, wolf +1'
-    assert river_crossing({'w': 1, 'g': 2, 'c': 1}, 1) is None, 'impossible'
+    assert river_crossing(1, 1, 1, 1) == 7, 'original'
+    assert river_crossing(1, 1, 1, 2) == 3, 'payload +1'
+    assert river_crossing(2, 1, 1, 2) == 5, 'payload +1, wolf +1'
+    assert river_crossing(1, 2, 1, 1) is None, 'impossible'
     print("Coding complete? Click 'Check' to earn cool rewards!")

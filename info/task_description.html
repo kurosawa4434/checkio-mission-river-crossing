@@ -4,13 +4,31 @@
     (also known as <a href="https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem" title="Wikipedia" target="_blank">Wolf, goat and cabbage problem</a>)
 </p>
 
-<p>summary:</p>
-<blockquote style="font-style: italic;">
-    The farmer needs to carry wolf, goat and cabbage by boat across the river.<br/>
-        - Only one can be loaded on the boat at a time.<br/>
-        - Don't leave wolf and goat on the bank (wolf eats goat).<br/>
-        - Don't leave goat and cabbage on the bank (goat eats cabbage).
-</blockquote>
+<table>
+    <tr>
+        <td><img src="{{MEDIA}}river_crossing_picture.png" style="max-height: 130px;"></td>
+            <td>
+                <p>summary:</p>
+                <ul style="font-style: italic;">
+                    <li>
+                        The farmer needs to carry wolf, goat and cabbage by boat across the river.
+                    <ul>
+                        <li>
+                            Only one can be loaded on the boat at a time.
+                        </li>
+                        <li>
+                            Don't leave wolf and goat on the bank (wolf eats goat).
+                        </li>
+                        <li>
+                            Don't leave goat and cabbage on the bank (goat eats cabbage).
+                        </li>
+                    </ul>
+                    </li>
+                </ul>
+            </td>
+    </tr>
+
+</table>
 <p>
    This time, I will extend this puzzle a little.
     The number of payload, wolf, goat and cabbage is arbitrary.<br/>
@@ -18,16 +36,13 @@
 </p>
 
 <p>
-    You are given a dictionary of three types of loads.
-
-(e.g. {'w': 1, 'g': 2, 'c': 0} # 1 wolf, 2 goats  and no cabbage) and maximum payload of boat  (integer).
-
+    You are given four integers as the number of wolves, goats, cabbages and payload of the boat.
 You have to return the minimum number of boat crossings required to carry all the loads.
 (If not possible, return None.)
 </p>
 <p><strong>NOTE:</strong></p>
 <ul>
-    <li>All kinds of load can live together on the boat. </li>
+    <li>All loads can live together on the boat. </li>
 </ul>
 
 <div class="for_info_only">
@@ -35,10 +50,10 @@ You have to return the minimum number of boat crossings required to carry all th
         <strong>Example:</strong>
     </p>
 <!-- Do NOT change the indentation of this pre-block -->
-<pre class="brush: python">river_crossing({'w': 1, 'g': 1, 'c': 1}, 1) == 7  # original
-river_crossing({'w': 1, 'g': 1, 'c': 1}, 2) == 3  # payload +1
-river_crossing({'w': 2, 'g': 1, 'c': 1}, 2) == 5  # payload +1, wolf +1
-river_crossing({'w': 1, 'g': 2, 'c': 1}, 1) is None  # impossible</pre>
+<pre class="brush: python">river_crossing(1, 1, 1, 1) == 7  # original
+river_crossing(1, 1, 1, 2) == 3  # payload +1
+river_crossing(2, 1, 1, 2) == 5  # payload +1, wolf +1
+river_crossing(1, 2, 1, 1) is None  # impossible</pre>
 <!-- pre-block end -->
     <table>
         <tr>
@@ -49,23 +64,18 @@ river_crossing({'w': 1, 'g': 2, 'c': 1}, 1) is None  # impossible</pre>
 </div>
 
 <p>
-    <strong>Input: </strong>two arguments:
-    <ul>
-        <li>The loads (a dictionary. {string: integer,})</li>
-        <li>The payload of boat (a integer)</li>
-    </ul>
+    <strong>Input: </strong> The number of wolves, goats, cabbages and payload (4 integers).
 </p>
 
 <p>
     <strong>Output: </strong>
-    The minimum number of boat crossings.
+    The minimum number of the boat crossings.
 </p>
 
 <p>
     <strong>Precondition:</strong>
     <ul>
-    <li>set(loads.keys()) == {'w', 'g', 'c'}</li>
-    <li>1 &le; sum(loads.values()) &le; 10</li>
+    <li>1 &le; wolves + goats + cabbages &le; 10</li>
     <li>1 &le; payload &le; 5</li>
     </ul>
 </p>

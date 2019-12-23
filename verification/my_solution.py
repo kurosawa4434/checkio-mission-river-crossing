@@ -1,9 +1,8 @@
 from math import ceil
 
 
-def river_crossing(items, payload):
-    goats = items['g']
-    others = items['w'] + items['c']
+def river_crossing(wolves, goats, cabbages, payload):
+    others = wolves + cabbages
 
     big = max(goats, others)
     small = min(goats, others)

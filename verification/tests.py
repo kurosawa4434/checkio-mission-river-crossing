@@ -23,9 +23,9 @@ def make_random_tests(num):
         wolves = randint(0, loads_total)
         goats = randint(0, loads_total - wolves)
         cabbages = loads_total - wolves - goats
-        loads = {'w': wolves, 'g': goats, 'c': cabbages}
-        answer = river_crossing(loads, payload)
-        random_tests.append({'input': [loads, payload],
+        # loads = {'w': wolves, 'g': goats, 'c': cabbages}
+        answer = river_crossing(wolves, goats, cabbages, payload)
+        random_tests.append({'input': [wolves, goats, cabbages, payload],
                              'answer': answer, })
 
     # pprint(random_tests)
@@ -35,52 +35,52 @@ def make_random_tests(num):
 TESTS = {
     "Basics": [
         {
-            'input': [{'w': 1, 'g': 1, 'c': 1}, 1],
+            'input': [1, 1, 1, 1],
             'answer': 7,
             'explanation': 'original',
         },
         {
-            'input': [{'w': 1, 'g': 1, 'c': 1}, 2],
+            'input': [1, 1, 1, 2],
             'answer': 3,
             'explanation': 'payload +1',
         },
         {
-            'input': [{'w': 2, 'g': 1, 'c': 1}, 2],
+            'input': [2, 1, 1, 2],
             'answer': 5,
             'explanation': 'payload +1, wolf +1',
         },
         {
-            'input': [{'w': 1, 'g': 2, 'c': 1}, 1],
+            'input': [1, 2, 1, 1],
             'answer': None,
             'explanation': 'impossible',
         },
     ],
     "Extra": [
         {
-            'input': [{'w': 9, 'g': 0, 'c': 0}, 2],
+            'input': [9, 0, 0, 2],
             'answer': 9,
             'explanation': '1 kinds',
         },
         {
-            'input': [{'w': 5, 'g': 0, 'c': 5}, 3],
+            'input': [5, 0, 5, 3],
             'answer': 7,
             'explanation': '2 kinds',
         },
         {
-            'input': [{'w': 3, 'g': 1, 'c': 0}, 2],
+            'input': [3, 1, 0, 2],
             'answer': 5,
             'explanation': '2 kinds. includes goat',
         },
         {
-            'input': [{'w': 3, 'g': 3, 'c': 3}, 3],
+            'input': [3, 3, 3, 3],
             'answer': 7,
             'explanation': '3 kinds',
         },
         {
-            'input': [{'w': 4, 'g': 3, 'c': 3}, 3],
+            'input': [4, 3, 3, 3],
             'answer': None,
             'explanation': 'impossible',
         },
     ],
-    "Randoms": make_random_tests(9)
+    "Randoms": make_random_tests(8)
 }
