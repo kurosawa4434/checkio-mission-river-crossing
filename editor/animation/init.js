@@ -69,7 +69,8 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
              *
              *----------------------------------------------*/
             let zoom
-            let bank_num
+            let left_bank_num
+            let right_bank_num
             let step_num
             let payload
             let p_width
@@ -78,10 +79,11 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
             // Basics & Extra
             if (explanation) {
                 zoom = .32
-                bank_num = explanation[0][0].length
+                left_bank_len = explanation[0][0].length
+                right_bank_len = explanation[0][2].length
                 step_num = explanation.length
                 payload = explanation[0][1].length
-                p_width = ((bank_num*UNIT_WIDTH)*2 + RIVER_WIDTH) * zoom
+                p_width = ((left_bank_len+right_bank_len)*UNIT_WIDTH + RIVER_WIDTH) * zoom
                 p_height = LANDSCAPE_HEIGHT * step_num * zoom
 
             // Randoms
@@ -140,11 +142,11 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                 }
 
                 // banks
-                draw_bank(top+MARGIN_TOP+(35*zoom), bank_num)
+                draw_bank(top+MARGIN_TOP+(35*zoom))
 
                 // boat
                 const BOAT_WIDTH = UNIT_WIDTH*payload+20
-                const boat_start = (bank_num*40 + [0, RIVER_WIDTH-BOAT_WIDTH][step % 2]) * zoom
+                const boat_start = (left_bank_len*40 + [0, RIVER_WIDTH-BOAT_WIDTH][step % 2]) * zoom
                 draw_boat(boat_start, top+MARGIN_TOP+(35*zoom), payload)
 
                 // baggage
@@ -161,7 +163,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
 
                 [[boat_contents, boat_start],
                  [left_baggage, 0],
-                 [right_baggage, (UNIT_WIDTH*bank_num + RIVER_WIDTH)*zoom]].forEach(([items, os])=>{
+                 [right_baggage, (UNIT_WIDTH*left_bank_len + RIVER_WIDTH)*zoom]].forEach(([items, os])=>{
                     draw_baggage(items, os)
                  })
             }
@@ -171,13 +173,13 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
              * bank
              *
              *----------------------------------------------*/
-            function draw_bank(y, size) {
+            function draw_bank(y) {
                 const z = zoom
-                paper.rect(0, y+(50*z), (UNIT_WIDTH*size-2)*z, 7*z, 5*z).attr(attr.bank)
-                paper.rect((40*size+RIVER_WIDTH+2)*z, y+(50*z), (40*size-2)*z, 7*z, 5*z).attr(attr.bank)
+                paper.rect(0, y+(50*z), (UNIT_WIDTH*left_bank_len-2)*z, 7*z, 5*z).attr(attr.bank)
+                paper.rect((40*left_bank_len+RIVER_WIDTH+2)*z, y+(50*z), (40*right_bank_len-2)*z, 7*z, 5*z).attr(attr.bank)
 
                 // river
-                paper.path(['M', (UNIT_WIDTH*size-4)*z, y+(50+6.7)*z, 'h', (RIVER_WIDTH+8)*z]).attr(attr.bank)
+                paper.path(['M', (UNIT_WIDTH*left_bank_len-4)*z, y+(50+6.7)*z, 'h', (RIVER_WIDTH+8)*z]).attr(attr.bank)
             }
 
             /*----------------------------------------------*
