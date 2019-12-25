@@ -88,7 +88,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
             } else {
                 zoom = .6
                 payload = input[3]
-                p_width = (UNIT_WIDTH*3+20)*zoom
+                p_width = (UNIT_WIDTH*3+40+2)*zoom
                 p_height = 40
             }
 
@@ -114,7 +114,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                 draw_boat(0, 0, 3, payload)
                 const [wolves, goats, cabbages] = input
                 const num = [wolves, goats, cabbages].map(x=>x>0 ? 1 : 0).reduce((a, b)=>a+b)
-                const offset_left = (3-num)*(UNIT_WIDTH/2)
+                const offset_left = (3-num)*(UNIT_WIDTH/2)+20+1
                 let j = 0
                 const funcs = [draw_wolf, draw_goat, draw_cabbage]
                 input.slice(0, 3).forEach((v, i)=>{
@@ -187,23 +187,25 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
              *----------------------------------------------*/
             function draw_boat(x, y, size, number) {
                 const z = zoom * 1
+                const extend = number ? 20 : 0
+                const r = 10 + (number ? 1 : 0)
                 paper.path([
                     'M', x, y+(50*z),
-                    'h', (40*size+20)*z,
-                    'a', 10*z, 10*z, 45, 0, 1, -10*z, 10*z,
-                    'h', (-40*size)*z,
-                    'a', 10*z, 10*z, 45, 0, 1, -10*z, -10*z,
+                    'h', (40*size+20+extend)*z,
+                    'a', r*z, r*z, 45, 0, 1, -r*z, r*z,
+                    'h', (-40*size-extend)*z,
+                    'a', r*z, r*z, 45, 0, 1, -r*z, -r*z,
                     'z'
                 ]).attr(attr.boat)
 
                 // man
-                paper.circle(x+(40*size+10)*z, y+(15*z), 5*z).attr(attr.boat)
-                paper.rect(x+(40*size+5)*z, y+(22*z), 10*z, 30*z, 4*z).attr(attr.boat)
+                paper.circle(x+(40*size+10+extend)*z, y+(11*z), 5*z).attr(attr.boat)
+                paper.rect(x+(40*size+5+extend)*z, y+(18*z), 10*z, 34*z, 4*z).attr(attr.boat)
 
                 // payload
                 if (number) {
-                    paper.text(x+((40*size+20)/2*z), y+((6+49)*z), number).attr(
-                        attr.number.boat).attr({'font-size': z*10})
+                    paper.text(x+((40*size+42)/2*z), y+((7+49)*z), number).attr(
+                        attr.number.boat).attr({'font-size': z*20})
                 }
             }
 
