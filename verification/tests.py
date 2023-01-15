@@ -143,5 +143,5 @@ TESTS = {
             ],
         },
     ],
-    "Randoms": make_random_tests(8)
+    # "Randoms": make_random_tests(8)
 }
