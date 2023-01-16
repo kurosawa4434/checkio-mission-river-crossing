@@ -142,6 +142,18 @@ TESTS = {
                 ['wwwwgggccc', '  ', '          '],
             ],
         },
+        {
+            'input': [2, 7, 0, 5],
+            'answer': 5,
+            'explanation': [
+                ['     gggg',   'gggww',    '         '],
+                ['     gggg',   '   ww',    'ggg      '],
+                ['       ww',   ' gggg',    'ggg      '],
+                ['       ww',   '     ',    'ggggggg  '],
+                ['         ',   '   ww',    'ggggggg  '],
+                ['         ',   '     ',    'wwggggggg'],
+            ],
+        },
     ],
     # "Randoms": make_random_tests(8)
 }
